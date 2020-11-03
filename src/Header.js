@@ -1,6 +1,8 @@
 import React from 'react'
 import { AppBar, makeStyles, Toolbar, Typography } from '@material-ui/core';
 import AccountBalanceRoundedIcon from '@material-ui/icons/AccountBalanceRounded';
+import Badge from '@material-ui/core/Badge';
+import MailIcon from '@material-ui/icons/Mail';
 
 const useStyles = makeStyles(() =>({
     typographyStyle: {
@@ -17,7 +19,9 @@ const Header = () => {
                 <Typography className={classes.typographyStyle}>
                     React ToDo List!
                 </Typography>
-                
+                <Badge badgeContent={4} color="primary">
+                    <MailIcon />
+                </Badge>
             </Toolbar>
         </AppBar>
     );

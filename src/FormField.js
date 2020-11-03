@@ -46,7 +46,11 @@ class FormField extends React.Component {
                Submit and see that
             </Button>
         </form>
-        <p>{this.state.submit}</p>
+        <ol>
+            <li>
+                {this.state.submit}
+            </li>
+        </ol>  
     </div>  
    
     );

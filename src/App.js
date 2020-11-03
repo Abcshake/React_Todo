@@ -4,7 +4,7 @@ import { Grid } from '@material-ui/core'
 import  Header  from './Header'
 import Content from './Content';
 import FormField from './FormField';
-
+import Slider from './Slider';
 
 const App = () => {
   return (
@@ -19,6 +19,9 @@ const App = () => {
           </Grid> 
           <Grid item>
             <FormField />
+          </Grid>
+          <Grid item>
+            <Slider />
           </Grid>
         <Grid item xs={false} sm={2}/>
       </Grid>
