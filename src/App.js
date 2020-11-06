@@ -8,12 +8,12 @@ import Slider from './Slider';
 
 const App = () => {
   return (
-    <Grid container direction="column" spacing={3}>
+    <Grid container direction="column" justify="center" spacing={3}>
       <Grid item>
         <Header />
       </Grid>
-      <Grid item container spacing={3} direction="row">
-        <Grid item xs={false} sm={2}/>
+      <Grid item container spacing={3} direction="column">
+        <Grid item xs={false}/>
           <Grid item> 
             <Content />
           </Grid> 
