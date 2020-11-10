@@ -5,6 +5,7 @@ import  Header  from './Header'
 import Content from './Content';
 import FormField from './FormField';
 import Slider from './Slider';
+import Card from './card';
 
 const App = () => {
   return (
@@ -12,7 +13,7 @@ const App = () => {
       <Grid item>
         <Header />
       </Grid>
-      <Grid item container spacing={3} direction="column">
+      <Grid item container spacing={3} justify="center" direction="row">
         <Grid item xs={false}/>
           <Grid item> 
             <Content />
@@ -20,10 +21,15 @@ const App = () => {
           <Grid item>
             <FormField />
           </Grid>
+      <Grid item xs={false} sm={2}/>
+      <Grid item container alignItems="center" direction="column">
           <Grid item>
             <Slider />
           </Grid>
-        <Grid item xs={false} sm={2}/>
+          <Grid item>
+            <Card />
+          </Grid>
+      </Grid> 
       </Grid>
     </Grid>
   )

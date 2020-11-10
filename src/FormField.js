@@ -38,7 +38,7 @@ class FormField extends React.Component {
         <form onSubmit={this.handleSubmit} className={useStyles.fieldStyle}>
             <TextField 
                 id="standard-basic"
-                label="Enter some Text"
+                label="How was your day :)"
                 value={this.state.input} 
                 onChange={this.displayText}
                 />
