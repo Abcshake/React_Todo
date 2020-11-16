@@ -22,13 +22,13 @@ const App = () => {
       <Grid item xs={false} sm={2}/>
       <Grid item container alignItems="center" direction="column" spacing = {3}>
           <Grid item>
-            <Slider />
+            <Date />
           </Grid>
           <Grid item>
             <Card />
           </Grid>
           <Grid item>
-            <Date />
+            <Slider />
           </Grid>
           <Grid item>
             <Statement />
