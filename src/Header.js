@@ -17,7 +17,7 @@ const Header = () => {
             <Toolbar>
                 <AccountBalanceRoundedIcon />
                 <Typography className={classes.typographyStyle}>
-                    React ToDo List!
+                    Daily Journal App
                 </Typography>
                 <Badge badgeContent={4} color="primary">
                     <MailIcon />

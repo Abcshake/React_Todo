@@ -20,7 +20,7 @@ const App = () => {
             <FormField />
           </Grid>
       <Grid item xs={false} sm={2}/>
-      <Grid item container alignItems="center" direction="column" spacing = {3}>
+      <Grid item container alignItems="center" direction="column" spacing = {5}>
           <Grid item>
             <Date />
           </Grid>

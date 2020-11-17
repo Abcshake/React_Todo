@@ -1,21 +1,15 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Container from '@material-ui/core/Container';
-import { Typography } from '@material-ui/core'
-import theme from './theme'
+import Box from '@material-ui/core/Box';
 
-
-
-export default function Statement() {
-  
-
+export default function Display() {
   return (
-    <div theme={theme}>
-        <Container maxWidth="lg">
-            <Typography align="center" style={{ backgroundColor: '#cfe8fc', height: '10vh', width: "50vh"}}>
-                Hope your day is better now!
-            </Typography>
-        </Container>
+    <div style={{ width: '100%' }}>
+      <Box display="flex"
+       p={9} m={2} bgcolor="#ffbaf6"
+       fontSize = {{md: 'h4.fontSize'}}
+       >
+        {"I hope your day is better now!"}
+      </Box>
     </div>
   );
 }
