@@ -21,21 +21,28 @@ export default function MediaCard(){
     return ( 
         <Card className={classes.root}>
             <CardActionArea>
-                <Typography variant="h5" component="h2">
-                    Stoia Poikile
-                </Typography>
-                <Typography variant="body2" color="textSecondary" component="p">
-                    The painted porch at Ancient Athens where the philosopher Zeno of Critium taught Stoicism   
-                </Typography>
+                <CardMedia
+                    className={classes.media}
+                    image="./images/stoa_poikile.jpg"
+                    title="Stoic Porch"
+                />
+                <CardContent>
+                    <Typography variant="h5" component="h2">
+                        Stoia Poikile
+                    </Typography>
+                    <Typography variant="body2" color="textSecondary" component="p">
+                        The painted porch at Ancient Athens where the philosopher Zeno of Critium taught Stoicism   
+                    </Typography>
+                </CardContent>
             </CardActionArea>
-            <CardActionArea>
+            <CardActions>
                 <Button size="small" color="primary">
                     Share
                 </Button>
                 <Button size="small" color="secondary">
                     Like
                 </Button>
-            </CardActionArea>
+            </CardActions>
         </Card>
     )
 }

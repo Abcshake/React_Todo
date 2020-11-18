@@ -16,7 +16,8 @@ const Header = () => {
         <AppBar position="static">
             <Toolbar>
                 <AccountBalanceRoundedIcon />
-                <Typography className={classes.typographyStyle}>
+                <Typography className={classes.typographyStyle}
+                 align="center">
                     Daily Journal App
                 </Typography>
                 <Badge badgeContent={4} color="primary">
