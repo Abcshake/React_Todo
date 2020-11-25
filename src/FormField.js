@@ -1,15 +1,11 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
-const useStyles = makeStyles({
-    fieldStyle: {
-        border: "5px"
-    }
-})
+import Box from '@material-ui/core/Box';
+
 
 class FormField extends React.Component {
-    //var classes = useStyles();
+    
     constructor(props) {
         super(props);
         this.state = {
@@ -19,6 +15,8 @@ class FormField extends React.Component {
         this.displayText = this.displayText.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
+        
+        
         displayText(event) {
             this.setState({
                 input: event.target.value
@@ -31,11 +29,25 @@ class FormField extends React.Component {
             });
           }
     render() {
+        let submit = this.state.submit
+        let box;
+        if (submit !== ""){
+            box = 
+            <Box display="flex"
+            p={9} m={2} bgcolor= "#ffbaf6"
+            fontSize = {{md: 'h5.fontSize'}}
+             >
+                {this.state.submit}
+            </Box>
+        } else {
+            box = 
+            <box></box>
+        }
     return (
     
     <div>
         
-        <form onSubmit={this.handleSubmit} className={useStyles.fieldStyle}>
+        <form onSubmit={this.handleSubmit}>
             <TextField 
                 id="standard-basic"
                 label="How was your day :)"
@@ -46,11 +58,8 @@ class FormField extends React.Component {
                Submit and see that
             </Button>
         </form>
-        <ol>
-            <li>
-                {this.state.submit}
-            </li>
-        </ol>  
+        {box}
+            
     </div>  
    
     );

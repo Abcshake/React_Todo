@@ -23,7 +23,7 @@ export default function MediaCard(){
             <CardActionArea>
                 <CardMedia
                     className={classes.media}
-                    image="./images/stoa_poikile.jpg"
+                    image="/src/images/stoa_poikile.jpg"
                     title="Stoic Porch"
                 />
                 <CardContent>

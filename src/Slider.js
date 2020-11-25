@@ -1,24 +1,47 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Slider from '@material-ui/core/Slider';
-import { Button } from '@material-ui/core';
+import { Button, Box } from '@material-ui/core';
 
-const useStyles = makeStyles({
-  root: {
-    width: 300,
-  },
-});
+
 
 function valuetext(value) {
   return `${value}°C`;
 }
 
-export default function DiscreteSlider() {
-  const classes = useStyles();
+class DiscreteSlider extends React.Component {
+  constructor(props){
+    super(props)
+    this.state = {isClicked: false};
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick(){
+    this.setState({isClicked: true});
+  }
+
+  render(){
+    let box;
+    if(this.state.isClicked){
+      box = 
+      <Box display="flex"
+       p={9} m={2} bgcolor="#ffbaf6"
+       fontSize = {{md: 'h4.fontSize'}}
+       >
+        {"I hope your day is better now :)"}
+      </Box>
+    } else {
+      box = 
+      <Box display="flex"
+       p={9} m={2} bgcolor="#ffbaf6"
+       fontSize = {{md: 'h4.fontSize'}}
+       >
+        {"Please Select something on the Scale"}
+      </Box>
+    }
 
   return (
-    <div className={classes.root}>
+    <div>
       <Typography id="discrete-slider" gutterBottom>
        Happiness Scale
       </Typography>
@@ -30,11 +53,17 @@ export default function DiscreteSlider() {
         step={10}
         marks
         min={10}
-        max={110}
+        max={100}
       />
-      <Button variant="contained" color="primary" type="sumbit">
-               Submit Please :)
-      </Button>
+      <Button variant="contained" color="primary" type="submit" onClick={this.handleClick}>
+            Submit Please
+      </Button>  
+      {box}
     </div>
   );
+  }
 }
+
+export {DiscreteSlider as default};
+
+

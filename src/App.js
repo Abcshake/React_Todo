@@ -6,7 +6,6 @@ import FormField from './FormField';
 import Slider from './Slider';
 import Card from './card';
 import Date from './Datepicker';
-import Statement from './Statement';
 
 const App = () => {
   return (
@@ -14,24 +13,20 @@ const App = () => {
       <Grid item>
         <Header />
       </Grid>
-      <Grid item container spacing={3} justify="center" direction="row">
-        <Grid item xs={false}/>
+      <Grid item container spacing={2} justify="center" direction="row">
           <Grid item>
             <FormField />
           </Grid>
-      <Grid item xs={false} sm={2}/>
+      <Grid item/>
       <Grid item container alignItems="center" direction="column" spacing = {5}>
           <Grid item>
             <Date />
           </Grid>
           <Grid item>
-            <Card />
-          </Grid>
-          <Grid item>
             <Slider />
           </Grid>
           <Grid item>
-            <Statement />
+            <Card />
           </Grid>
       </Grid> 
       </Grid>
