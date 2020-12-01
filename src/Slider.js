@@ -25,7 +25,7 @@ class DiscreteSlider extends React.Component {
     if(this.state.isClicked){
       box = 
       <Box display="flex"
-       p={9} m={2} bgcolor="#ffbaf6"
+       p={9} m={2} bgcolor="#a0d8f2"
        fontSize = {{md: 'h4.fontSize'}}
        >
         {"I hope your day is better now :)"}

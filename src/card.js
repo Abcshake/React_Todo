@@ -8,7 +8,7 @@ import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 //import Paper from '@material-ui/core/Paper';
-
+import FormField from './FormField';
 // const useStyles = withStyles({
 //     root: {
 //         maxWidth: 345,
@@ -16,19 +16,23 @@ import Typography from '@material-ui/core/Typography';
 // })
 
 var url = "https://api.wordnik.com/v4/word.json/"
-var word = "Random"
+var word = "Charming"
 var url2 = "/examples?includeDuplicates=false&useCanonical=false&limit=5&api_key=8xjha7s9g4047yn5nu0v8pvlasuazkl4yaqt72csvkepbf161"
 
 
 
 class MediaCard extends React.Component{
     //const classes = useStyles
-
+    // constructor(props) {
+    //     super(props);
+    //   }
     state= {
         word: null,
         example: null,
         loading: true
-    };
+    }
+
+
 
     async componentDidMount(){
         const finalUrl = url + word + url2;
@@ -39,6 +43,7 @@ class MediaCard extends React.Component{
     }
 
     render(){
+       
         if (this.state.loading) {
             return <div>loading...</div>;
           }
@@ -69,30 +74,7 @@ class MediaCard extends React.Component{
              </CardActions>
         </Card>
         </div>
-        // <Card>
-        //     <CardActionArea>
-        //         <CardMedia
-        //             image="/src/images/stoa_poikile.jpg"
-        //             title="Stoic Porch"
-        //         />
-        //         <CardContent>
-        //             <Typography variant="h5" component="h2">
-        //                 {this.state.word}
-        //             </Typography>
-        //             <Typography variant="body2" color="textSecondary" component="p">
-        //                 {this.state.example}
-        //             </Typography>
-        //         </CardContent>
-        //     </CardActionArea>
-        //     <CardActions>
-        //         <Button size="small" color="primary">
-        //             Share
-        //         </Button>
-        //         <Button size="small" color="secondary">
-        //             Like
-        //         </Button>
-        //     </CardActions>
-        // </Card>
+        
     )
     }
 }

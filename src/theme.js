@@ -6,10 +6,10 @@ const theme = createMuiTheme({
     border: "5px",
     palette: {
     primary: {
-      main: purple[500],
+      main: blue[500],
     },
     secondary: {
-      main: blue[500],
+      main: purple[500],
     },
     typography: {
       fontSize: 20,
