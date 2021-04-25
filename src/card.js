@@ -17,7 +17,7 @@ import FormField from './FormField';
 
 var url = "https://api.wordnik.com/v4/word.json/"
 var word = "Charming"
-var url2 = "/examples?includeDuplicates=false&useCanonical=false&limit=5&api_key=8xjha7s9g4047yn5nu0v8pvlasuazkl4yaqt72csvkepbf161"
+var url2 = "/examples?includeDuplicates=false&useCanonical=false&limit=5&api_key=process.env.apikey"
 
 
 
